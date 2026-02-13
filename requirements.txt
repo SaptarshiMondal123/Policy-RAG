@@ -1,5 +1,6 @@
 langchain
 langchain-community
+sentence-transformers
 langchain-core
 langchain-text-splitters
 langchain-google-genai
