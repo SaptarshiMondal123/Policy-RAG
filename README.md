@@ -100,6 +100,18 @@ While the requirement stated "no fancy UI," I included a Streamlit interface as 
 
 Standard vector search often retrieves "nearest neighbors" that are mathematically close but contextually irrelevant. The added Distance Threshold Filtering acts as a lightweight reranker, ensuring only high-quality context reaches the LLM, drastically reducing hallucinations.
 
+## 🧠 Developer Reflections
+
+### 🏆 What I'm Most Proud Of
+I am most proud of the **Self-Correction Evaluation Loop (`evaluate.py`)**. 
+Instead of relying on vibe-checks, I implemented an "LLM-as-a-Judge" pattern to scientifically benchmark the system. This script automatically grades the answers against ground-truth facts, ensuring the system isn't just generating plausible text, but accurately retrieving specific policy details (e.g., correctly calculating fee deductions).
+
+### 🚀 One Thing I'd Improve Next
+If I had more time, I would implement **Adaptive RAG using LangGraph**.
+Currently, the system uses a "one-shot" retrieval approach. If a user asks a question using ambiguous terms (e.g., "time limit" instead of "deadline"), the vector search might miss the relevant chunk due to vocabulary mismatch, resulting in a low retrieval score. 
+
+A graph-based agent could detect this low confidence and **rewrite the query** to retry the search with better domain terminology. **Note:** This improves the retrieval of *existing* information that was missed; it does not hallucinate information that is physically absent from the source documents.
+
 ## 📦 Requirements
 
 *   Python 3.9+

@@ -1,15 +1,15 @@
 import os
 import logging
-from pydantic import BaseModel, Field
-from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_community.vectorstores import Chroma
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import JsonOutputParser
-from langchain_core.runnables import RunnablePassthrough
-from dotenv import load_dotenv
+from pydantic import BaseModel, Field # type: ignore
+from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader # type: ignore
+from langchain_text_splitters import RecursiveCharacterTextSplitter # type: ignore
+from langchain_huggingface import HuggingFaceEmbeddings # type: ignore
+from langchain_google_genai import ChatGoogleGenerativeAI # type: ignore
+from langchain_community.vectorstores import Chroma # type: ignore
+from langchain_core.prompts import ChatPromptTemplate # type: ignore
+from langchain_core.output_parsers import JsonOutputParser # type: ignore
+from langchain_core.runnables import RunnablePassthrough # type: ignore
+from dotenv import load_dotenv # type: ignore
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)

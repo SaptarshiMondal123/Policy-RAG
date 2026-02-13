@@ -1,8 +1,8 @@
 import time
 from rag_engine import RAGSystem
-from tabulate import tabulate
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+from tabulate import tabulate # type: ignore
+from langchain_core.prompts import ChatPromptTemplate # type: ignore
+from langchain_core.output_parsers import StrOutputParser # type: ignore
 
 def run_evaluation():
     print("Loading RAG System...")
