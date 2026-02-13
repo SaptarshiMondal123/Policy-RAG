@@ -15,9 +15,6 @@ env/
 # Vector Database (Generated and large)
 chroma_db/
 
-# Data (Internal/Sensitive documents)
-data/
-
 # OS specific
 .DS_Store
 Thumbs.db
