@@ -1,0 +1,27 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables (Sensitive - CRITICAL)
+.env
+.env.local
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Vector Database (Generated and large)
+chroma_db/
+
+# Data (Internal/Sensitive documents)
+data/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
